@@ -236,4 +236,3 @@ dependencies:
       - webcolors==24.11.1
       - webencodings==0.5.1
       - websocket-client==1.8.0
-prefix: /mnt/navz/anaconda3/envs/nlp-finance
