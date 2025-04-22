@@ -34,7 +34,6 @@ def save_articles(articles, query_tag, save_as_csv=False):
     from datetime import datetime
     import json, csv
 
-    # 👇 Create the folder if it doesn’t exist
     save_dir = "data/raw_news"
     os.makedirs(save_dir, exist_ok=True)
 
