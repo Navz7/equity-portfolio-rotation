@@ -60,7 +60,6 @@ def preprocess_articles(articles):
     df['text'] = df['title'].fillna('') + '. ' + df['description'].fillna('')
     return df
 
-# Add sentiment column to a given DataFrame
 def apply_finbert_sentiment(df, text_col='text'):
     tqdm.pandas()  # Enables progress bar
     
@@ -85,12 +84,11 @@ tokenizer = BertTokenizer.from_pretrained(finbert_model_name)
 model = BertForSequenceClassification.from_pretrained(finbert_model_name)
 finbert = pipeline("sentiment-analysis", model=model, tokenizer=tokenizer)
 
-# Example usage
-raw_data_dir = 'data/raw_news'  # Replace with your directory path
+raw_data_dir = 'data/raw_news'
 all_articles = load_raw_data(raw_data_dir)
 
 df = preprocess_articles(all_articles)
 
-# Applying sentiment analysis 
+#Applying Sentiment analysis to existing df--> sentiment + confidence will be tracked.
 df = apply_finbert_sentiment(df, text_col='text')
 print(df.head())
