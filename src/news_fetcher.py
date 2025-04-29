@@ -63,31 +63,57 @@ def save_articles(articles, query_tag, save_as_csv=False):
 
 if __name__ == "__main__":
     # Example queries — you can later loop through a list of these
+    #queries = {
+    # "overall": '(stock performance OR sector growth OR stock market trends) AND (india OR "indian market") AND ("Q2 2025" OR "quarterly results" OR "sector performance")',
+
+    # "banking": '("banking sector" OR "financial sector" OR "NBFC") AND india AND ("Q2 2025" OR "quarterly results")',
+
+    # "it": '("IT sector" OR "tech stocks" OR "software services" OR "information technology") AND india AND ("Q2 2025" OR "quarterly earnings")',
+
+    # "pharma": '("pharma sector" OR "pharmaceuticals" OR "healthcare stocks") AND india AND ("Q2 2025" OR "quarterly results")',
+
+    # "fmcg": '("FMCG" OR "consumer goods" OR "fast moving consumer goods") AND india AND ("Q2 2025" OR "demand trends" OR "sector outlook")',
+
+    # "auto": '("automobile sector" OR "auto industry" OR "EV market" OR "vehicle sales") AND india AND ("Q2 2025" OR "auto sales")',
+
+    # "energy": '("energy sector" OR "oil and gas" OR "renewable energy" OR "power sector") AND india AND ("Q2 2025" OR "energy outlook")',
+
+    # "real_estate": '("real estate sector" OR "property market" OR "housing demand") AND india AND ("Q2 2025" OR "market forecast")',
+
+    # "infrastructure": '("infrastructure" OR "construction sector" OR "capital goods") AND india AND ("Q2 2025" OR "government spending")',
+
+    # "metals": '("metal stocks" OR "steel industry" OR "mining sector") AND india AND ("Q2 2025" OR "commodity prices")',
+
+    # "telecom": '("telecom sector" OR "5G rollout" OR "telecom stocks") AND india AND ("Q2 2025" OR "subscriber growth")',
+
+    # "agriculture": '("agriculture sector" OR "agribusiness" OR "crop output" OR "rural economy") AND india AND ("Q2 2025" OR "monsoon forecast")',
+    # }
+
     queries = {
-    "overall": '(stock performance OR sector growth OR stock market trends) AND (india OR "indian market") AND ("Q2 2025" OR "quarterly results" OR "sector performance")',
 
-    "banking": '("banking sector" OR "financial sector" OR "NBFC") AND india AND ("Q2 2025" OR "quarterly results")',
+        "banking": '("banking sector" OR "financial sector" OR "NBFC" OR "bank performance") AND india AND ("Q2 2025" OR "quarterly results" OR "financial performance")',
 
-    "it": '("IT sector" OR "tech stocks" OR "software services" OR "information technology") AND india AND ("Q2 2025" OR "quarterly earnings")',
+        "it": '("IT sector" OR "tech stocks" OR "software services" OR "information technology" OR "tech industry growth") AND india AND ("Q2 2025" OR "quarterly earnings" OR "sector outlook")',
 
-    "pharma": '("pharma sector" OR "pharmaceuticals" OR "healthcare stocks") AND india AND ("Q2 2025" OR "quarterly results")',
+        "pharma": '("pharma sector" OR "pharmaceuticals" OR "healthcare stocks" OR "drug companies") AND india AND ("Q2 2025" OR "quarterly results" OR "healthcare outlook")',
 
-    "fmcg": '("FMCG" OR "consumer goods" OR "fast moving consumer goods") AND india AND ("Q2 2025" OR "demand trends" OR "sector outlook")',
+        "fmcg": '("FMCG" OR "consumer goods" OR "fast moving consumer goods" OR "retail demand" OR "consumer spending") AND india AND ("Q2 2025" OR "demand trends" OR "sector outlook")',
 
-    "auto": '("automobile sector" OR "auto industry" OR "EV market" OR "vehicle sales") AND india AND ("Q2 2025" OR "auto sales")',
+        "auto": '("automobile sector" OR "auto industry" OR "EV market" OR "vehicle sales" OR "automobile demand") AND india AND ("Q2 2025" OR "auto sales forecast" OR "industry outlook")',
 
-    "energy": '("energy sector" OR "oil and gas" OR "renewable energy" OR "power sector") AND india AND ("Q2 2025" OR "energy outlook")',
+        "energy": '("energy sector" OR "oil and gas" OR "renewable energy" OR "power sector" OR "energy production") AND india AND ("Q2 2025" OR "energy outlook" OR "market forecast")',
 
-    "real_estate": '("real estate sector" OR "property market" OR "housing demand") AND india AND ("Q2 2025" OR "market forecast")',
+        "real_estate": '("real estate sector" OR "property market" OR "housing demand" OR "construction trends") AND india AND ("Q2 2025" OR "market forecast" OR "real estate outlook")',
 
-    "infrastructure": '("infrastructure" OR "construction sector" OR "capital goods") AND india AND ("Q2 2025" OR "government spending")',
+        "infrastructure": '("infrastructure" OR "construction sector" OR "capital goods" OR "infrastructure projects") AND india AND ("Q2 2025" OR "government spending" OR "sector forecast")',
 
-    "metals": '("metal stocks" OR "steel industry" OR "mining sector") AND india AND ("Q2 2025" OR "commodity prices")',
+        "metals": '("metal stocks" OR "steel industry" OR "mining sector" OR "commodity prices") AND india AND ("Q2 2025" OR "industry forecast" OR "commodity outlook")',
 
-    "telecom": '("telecom sector" OR "5G rollout" OR "telecom stocks") AND india AND ("Q2 2025" OR "subscriber growth")',
+        "telecom": '("telecom sector" OR "5G rollout" OR "telecom stocks" OR "subscriber growth" OR "mobile data usage") AND india AND ("Q2 2025" OR "subscriber growth forecast" OR "telecom outlook")',
 
-    "agriculture": '("agriculture sector" OR "agribusiness" OR "crop output" OR "rural economy") AND india AND ("Q2 2025" OR "monsoon forecast")',
+        "agriculture": '("agriculture sector" OR "agribusiness" OR "crop output" OR "rural economy" OR "monsoon impact") AND india AND ("Q2 2025" OR "monsoon forecast" OR "agriculture outlook")'
     }
+
 
     for tag, q in queries.items():
         print(f"\nFetching articles for: {tag}")
