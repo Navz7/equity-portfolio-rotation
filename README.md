@@ -1,6 +1,6 @@
-# NLP Driven Equity Portfolio Rotation Dashboard - By Navneeth Anil Kumar
+# NLP Driven Equity Sector Rotation Dashboard - By Navneeth Anil Kumar
 
-# 📈📉Equity Portfolio Rotation Recommendation Engine
+# 📈📉 Dynamic Equity Sector Recommendation Engine
 
 This project is a sentiment analysis dashboard that helps recommend equity sector allocations based on the tone of financial news headlines. By leveraging powerful NLP models (FinBERT and VADER) and visualized through Streamlit. The dashboard suggests which sectors show the most optimism in the market — allowing for smarter portfolio rotation decisions. 
 
